@@ -39,24 +39,44 @@ function insertText(e) {
     }
 };
 
-const workList = document.querySelector(".work-container");
+const workList = document.querySelector(".work-list");
 const leftButton = document.getElementById("leftButton");
 const rightButton = document.getElementById("rightButton");
+const slideAmount = 295;
+const maxScroll = slideAmount * (11) -5;
 
-let scrollAmount = 0;
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+workList.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - workList.offsetLeft;
+    scrollLeft = workList.scrollLeft;
+});
+
+workList.addEventListener("mouseup", () => {
+    isDragging = false;
+});
+
+workList.addEventListener("mouseleave", () => {
+    isDragging = false;
+});
+
+workList.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - workList.offsetLeft;
+    const walk = (x - startX) * 2;
+    workList.scrollLeft = Math.min(maxScroll, Math.max(0, scrollLeft - walk));
+});
 
 leftButton.addEventListener("click", () => {
-    scrollAmount -= 6 * 270; // Adjust the width of a single book
-    workList.scroll({
-        left: scrollAmount,
-        behavior: "smooth",
-    });
+    workList.scrollLeft -= slideAmount * 1;
+    workList.scrollLeft = Math.max(0, workList.scrollLeft);
 });
 
 rightButton.addEventListener("click", () => {
-    scrollAmount += 6 * 270; // Adjust the width of a single book
-    workList.scroll({
-        left: scrollAmount,
-        behavior: "smooth",
-    });
+    workList.scrollLeft += slideAmount * 1;
+    workList.scrollLeft = Math.min(maxScroll, workList.scrollLeft);
 });

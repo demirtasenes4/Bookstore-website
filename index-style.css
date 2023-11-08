@@ -211,7 +211,7 @@ section .main .main_img img{
 .bestseller{
     width: 100%;
     height: 100vh;
-    padding: 100px 0;
+    padding: 5em 0;
 }
 
 .bestseller h1{
@@ -286,103 +286,51 @@ section .main .main_img img{
 
 /*Books*/
 
-.featured_boks{
+#featured{
+    padding: 5em 0;
     width: 100%;
     height: 100vh;
-    padding: 100px 0;
 }
-
-.featured_boks h1{
+#featured h1{
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
     font-size: 50px;
     background-color: rgba(128, 128, 128, 0.25);
 }
-
-.featured_boks .featured_book_box{
-    width: 95%;
-    height: 60vh;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    overflow: hidden;
-    overflow-x: scroll;
-}
-
-.featured_boks .featured_book_box .featured_book_card{
-    width: 250px;
-    height: 420px;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #919191;
-    margin: auto 20px;
-}
-
-.featured_boks .featured_book_box .featured_book_card:hover{
-    box-shadow: 0 0 5px #089da1;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_img img{
-    width: 150px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag h2{
-    margin: 12px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .writer{
-    color: #919191;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .categories{
-    color: #089da1;
-    margin-top: 8px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price{
-    margin-top: 8px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price sub{
-    font-weight: 100;
-    padding: 0 5px;
-}
-
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .f_btn{
-    padding: 8px 20px;
-    border: 2px solid #089da1;
-    text-decoration: none;
-    color: #000;
-}
-.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .f_btn:hover{
-    background-color: rgba(8, 156, 161, 0.301);
-}
-
-
-
-#featured{
-    padding: 50px 0;
-}
-.container{
+.work-container{
     display: flex;
-    align-items: center;
+    margin-top: 4em;
 }
 .work-list{
-	width: 90%;
+	width: 86%;
     height: 30em;
-    margin: 0 auto;
-    display: grid;
-    justify-content: start;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    display: inline-block;
     overflow: hidden;
-    white-space: nowrap;
     overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 40px;
     border: 1px solid #000000;
     border-radius: 10px;
+    cursor: grab;
+}
+.work-list:active{
+    cursor: grabbing;
+}
+.slider-button {
+    margin: auto 25px;
+    font-size: 2.4em;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px;
+    width: 1.2em;
+}
+.slider-button:hover {
+    background-color: rgba(56, 183, 187, 0.5)
 }
 .work{
     display: inline-block;
@@ -394,17 +342,7 @@ section .main .main_img img{
     margin: auto 20px;
     background: #f0f0f0;
     border: 1px solid #000000;
-}
-.slider-button {
-    margin: auto 25px;
-    font-size: 2.4em;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 3px;
-}
-.slider-button:hover {
-    background-color: rgba(56, 183, 187, 0.5)
+    
 }
 .work img{
 	width: 100%;
@@ -415,7 +353,7 @@ section .main .main_img img{
 .layer{
     width: 250px;
     height: 0;
-	background: linear-gradient(rgba(0,0,0,0.5),  rgba(8, 156, 161, 0.788));
+	background: linear-gradient(rgba(0,0,0,0.5),  rgb(8, 160, 160));
 	border-radius: 10px;
 	position: absolute;
 	left: 0;
@@ -423,6 +361,7 @@ section .main .main_img img{
 	overflow: hidden;
 	display: flex;
 	align-items: center;
+    color: white;
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 40px;
@@ -433,6 +372,7 @@ section .main .main_img img{
 .layer h2{
     font-weight: 800;
     margin-bottom: 20px;
+    color: #000;
 }
 .layer .description{
     display: flex;
@@ -456,10 +396,11 @@ section .main .main_img img{
 	transition: background 0.5s;
 }
 .btn:hover{
-	background-color: rgba(8, 156, 161, 0.301);
+	background-color: rgba(10, 121, 180, 0.9);
 }
 ::-webkit-scrollbar{
     width: 10px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track{
