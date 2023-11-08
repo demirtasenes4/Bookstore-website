@@ -5,28 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
-    <title>Book Store Website</title>
+    <title>MyBooks</title>
     <link rel="stylesheet" href="index-style.css">
 </head>
 <body>
     <section>
         <nav>
-            <div class="menu-button" style="border-radius: 50%; transition: 0.5s;">
-                <div class="burger-menu" style="padding: 10px;">
-                    <i class="fa-solid fa-bars" style="font-size: 1.6em; cursor: pointer;"></i>
+            <a href="index.html" data-after="home"><li>
+                <div class="logo" href="index.html" data-after="home">
+                    <img src="image/logo.png">
+                    <h4 style="color:black">MyBooks</h4>
                 </div>
-            </div>
-            <ul class="menu-list">
-                <div class="tab-titles">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </div>
-            </ul>
-            <div class="logo" onclick="refreshPage()">
-                <img src="image/logo.png" href="index.html">
-                <li>MyBooks</li>
-            </div>
+            </li></a>
             <div id="search" class>
                 <input id="search-input" type="text" name="search_keyword" autocomplete="off" value placeholder="search book, author or publisher name" class>
                 <div class="seach-tools">
@@ -53,23 +43,35 @@
                     </div>
                 </div>
             </div>
-            <div class="option-button">
-                <div class="burger-menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
+            
+            <div class="buttons">
+                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
+                    <div class="burger-menu" style="padding: 5px;">
+                        <i class="fa-regular fa-user" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
+                    </div>
                 </div>
+                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding:10px;">
+                    <div class="burger-menu" style="padding: 5px;">
+                        <i class="fa-solid fa-cart-shopping" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
+                    </div>
+                </div>
+                <div class="menu-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
+                    <div class="burger-menu" style="padding: 5px;">
+                        <i class="fa-solid fa-bars" style="font-size: 1.6em; cursor: pointer;"></i>
+                    </div>
+                </div>
+                <ul class="menu-list">
+                    <div id="tab-titles">
+                        <li><a href="#home" data-after="home" onclick="scrollToTop()">Home</a></li>
+                        <li><a href="about.html" data-after="about">About</a></li>
+                        <li><a href="categories.html" data-after="categories">Categories</a></li>
+                        <li><a href="#bestseller" data-after="bestseller">Bestseller</a></li>
+                        <li><a href="#books" data-after="books">Featured</a></li>
+                        <li><a href="#reviews" data-after="reviews">Reviews</a></li>
+                        <li><a href="#blogs" data-after="blogs">Blogs</a></li>
+                    </div>
+                </ul>
             </div>
-            <ul class="menu-list">
-                <div class="tab-titles">
-                    <li><a href="#home" data-after="home" onclick="scrollToTop()">Home</a></li>
-                    <li><a href="about.html" data-after="about">About</a></li>
-                    <li><a href="#bestseller" data-after="bestseller">Bestseller</a></li>
-                    <li><a href="#featured" data-after="featured">Featured</a></li>
-                    <li><a href="#reviews" data-after="reviews">Reviews</a></li>
-                    <li><a href="#blogs" data-after="blogs">Blogs</a></li>
-                </div>
-            </ul>
         </nav>
 
         <div class="main">
@@ -87,6 +89,12 @@
             </div>
         </div>
     </section>
+
+    <!--Banner Sales-->
+
+    <div class="banner_sales">
+        <a href="#" class="banner_btn">Learn More</a>
+    </div>
 
     <!--Bestseller-->
 
@@ -268,7 +276,7 @@
     
     <!--Books-->
 
-    <div id="featured" class="featured_books">
+    <div id="books" class="featured_books">
         <h1>Featured Books</h1>
         <div class="work-container">
             <div class="slider-button" id="leftButton">&#9664;</div>

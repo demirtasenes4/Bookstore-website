@@ -80,3 +80,13 @@ rightButton.addEventListener("click", () => {
     workList.scrollLeft += slideAmount * 1;
     workList.scrollLeft = Math.min(maxScroll, workList.scrollLeft);
 });
+
+// ---- Burger Menu ----
+
+const burgerMenu = document.querySelector('.burger-menu');
+const menuButton = document.querySelector('.menu-button');
+const menuList = document.querySelector('.menu-list');
+
+menuButton.addEventListener('click', () => {
+    menuList.classList.toggle('active');
+});

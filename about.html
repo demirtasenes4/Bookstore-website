@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
-    <title>Book Store Website</title>
+    <title>MyBooks</title>
     <link rel="stylesheet" href="index-style.css">
+    <style>
+        .tab-titles li{
+            padding: 12px;
+            border-radius: 50%;
+        }
+        .tab-titles li:hover{
+            background-color: #91919196;
+        }
+    </style>
 </head>
 <body>
     <section>
-        <nav style="justify-content: space-between;">
-            <div></div>
-            <div class="logo" onclick="refreshPage()">
-                <img src="image/logo.png" href="index.html">
-                <li>MyBooks</li>
-            </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <ul class="menu-list">
-                <div class="tab-titles">
-                    <li><a href="index.html" data-after="home"><i class="fa-solid fa-house" style="cursor: pointer; font-size: 40px; color: #01a6aca1;"></i></a></li>
-                    <li><a></a></li>
-                    <li><a></a></li>
-                    <li><a></a></li>
-                    <li><a></a></li>
+        <nav>
+            <a href="index.html" data-after="home"><li>
+                <div class="logo" href="index.html" data-after="home">
+                    <img src="image/logo.png">
+                    <h4 style="color:black">MyBooks</h4>
                 </div>
-            </ul>
+            </li></a>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="buttons">
+                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
+                    <div class="burger-menu" style="padding: 10px;">
+                        <i class="fa-regular fa-user" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
+                    </div>
+                </div>
+                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding:10px;">
+                    <div class="burger-menu" style="padding: 10px;">
+                        <i class="fa-solid fa-cart-shopping" style="font-size: 1.6em; cursor: pointer;"></i>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="main">
             <div class="main_tag">
