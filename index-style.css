@@ -59,7 +59,7 @@ section nav .user-button:hover{
     box-shadow: 0 0 10px #089da1;
 }
 #tab-titles{
-    padding-top: 50px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     
