@@ -362,9 +362,104 @@ section .main .main_img img{
     background-color: rgba(8, 156, 161, 0.301);
 }
 
+
+
+#featured{
+    padding: 50px 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.work-list{
+	width: 90%;
+    height: 30em;
+    margin: 0 auto;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+.work{
+    display: inline-block;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+    width: 250px;
+    text-align: center;
+    margin: auto 20px;
+    background: #f0f0f0;
+    border: 1px solid #000000;
+}
+.slider-button {
+    margin: auto 25px;
+    font-size: 2.4em;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px;
+}
+.slider-button:hover {
+    background-color: rgba(56, 183, 187, 0.5)
+}
+.work img{
+	width: 100%;
+	border-radius: 10px;
+	display: block;
+	transition: transform 0.5s;
+}
+.layer{
+    width: 250px;
+    height: 0;
+	background: linear-gradient(rgba(0,0,0,0.5),  rgba(8, 156, 161, 0.788));
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+
+	transition: height 0.4s;
+}
+.layer h2{
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.layer .description{
+    display: flex;
+    flex-wrap: wrap;
+}
+.work:hover img{
+	transform: scale(1.1);
+}
+.work:hover .layer{
+	height: 100%;
+
+}
+.btn{
+	display: block;
+	margin: 50px auto;
+	width: fit-content;
+	border: 1px solid #ffffff;
+	padding: 14px 50px;
+	border-radius: 6px;
+	color: white;
+	transition: background 0.5s;
+}
+.btn:hover{
+	background-color: rgba(8, 156, 161, 0.301);
+}
 ::-webkit-scrollbar{
     width: 10px;
-    height: 5px;
 }
 
 ::-webkit-scrollbar-track{
@@ -375,6 +470,7 @@ section .main .main_img img{
     background: #089da1;
     border-radius: 10px;
 }
+
 
 /*Banner*/
 

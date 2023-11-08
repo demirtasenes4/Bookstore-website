@@ -39,3 +39,24 @@ function insertText(e) {
     }
 };
 
+const workList = document.querySelector(".work-container");
+const leftButton = document.getElementById("leftButton");
+const rightButton = document.getElementById("rightButton");
+
+let scrollAmount = 0;
+
+leftButton.addEventListener("click", () => {
+    scrollAmount -= 6 * 270; // Adjust the width of a single book
+    workList.scroll({
+        left: scrollAmount,
+        behavior: "smooth",
+    });
+});
+
+rightButton.addEventListener("click", () => {
+    scrollAmount += 6 * 270; // Adjust the width of a single book
+    workList.scroll({
+        left: scrollAmount,
+        behavior: "smooth",
+    });
+});
