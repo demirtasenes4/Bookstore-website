@@ -73,6 +73,9 @@ section nav .user-button:hover{
     position: absolute;
 	bottom: 0px;
 }
+#tab-titles li::after:hover{
+    width: 100%;
+}
 @media (max-width: 486px) {
     .menu-list.active {
         width: 90%;
