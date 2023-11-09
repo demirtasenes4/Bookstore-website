@@ -51,7 +51,7 @@
 	width: 60%;
 	height: 3px;
     left: 20%;
-	background: rgb(50, 70, 200);
+	background: rgba(10, 120, 180);
     position: absolute;
 	bottom: 0px;
 }
@@ -69,7 +69,7 @@
     transition: 0.5s;
 }
 .tab-titles p:hover{
-    background-color: rgb(50, 80, 200);
+    background-color: rgba(10, 120, 180);
     transform: translateX(10px);
 }
 .tab-contents li{
@@ -108,54 +108,56 @@
 <body>
     <section>
         <nav>
-            <a href="index.html" data-after="home"><li>
-                <div class="logo" href="index.html" data-after="home">
-                    <img src="image/logo.png">
-                    <h4 style="color:black">MyBooks</h4>
-                </div>
-            </li></a>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="buttons">
-                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
-                    <div class="burger-menu" style="padding: 10px;">
-                        <i class="fa-regular fa-user" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
+            <div class="nav-container">
+                <a href="index.html" data-after="home"><li>
+                    <div class="logo" href="index.html" data-after="home">
+                        <img src="image/logo.png">
+                        <h4 style="color:black">MyBooks</h4>
                     </div>
-                </div>
-                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding:10px;">
-                    <div class="burger-menu" style="padding: 10px;">
-                        <i class="fa-solid fa-cart-shopping" style="font-size: 1.6em; cursor: pointer;"></i>
+                </li></a>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="buttons">
+                    <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
+                        <div class="burger-menu" style="padding: 10px;">
+                            <i class="fa-regular fa-user" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="menu-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
-                    <div class="burger-menu" style="padding: 10px;">
-                        <i class="fa-solid fa-bars" style="font-size: 1.6em; cursor: pointer;"></i>
+                    <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding:10px;">
+                        <div class="burger-menu" style="padding: 10px;">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 1.6em; cursor: pointer;"></i>
+                        </div>
                     </div>
-                </div>
-                <ul class="menu-list">
-                    <h2>Categories</h2>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('category1')">Art & Photography</p>
-                        <p class="tab-links" onclick="opentab('category2')">Biography</p>
-                        <p class="tab-links" onclick="opentab('category3')">Business & Finance</p>
-                        <p class="tab-links" onclick="opentab('category4')">Cookbooks</p>
-                        <p class="tab-links" onclick="opentab('category5')">Children's Books</p>
-                        <p class="tab-links" onclick="opentab('category6')">Classic Literature</p>
-                        <p class="tab-links" onclick="opentab('category7')">Fiction</p>
-                        <p class="tab-links" onclick="opentab('category8')">Fantasy</p>
-                        <p class="tab-links" onclick="opentab('category9')">Horror</p>
-                        <p class="tab-links" onclick="opentab('category10')">Historical</p>
-                        <p class="tab-links" onclick="opentab('category11')">Mystery</p>
-                        <p class="tab-links" onclick="opentab('category12')">Non-Fiction</p>
-                        <p class="tab-links" onclick="opentab('category13')">Poetry</p>
-                        <p class="tab-links" onclick="opentab('category14')">Romance</p>
-                        <p class="tab-links" onclick="opentab('category15')">Science & Nature</p>
-                        <p class="tab-links" onclick="opentab('category16')">Science Fiction</p>
-                        <p class="tab-links" onclick="opentab('category17')">Technology</p>
-                        <p class="tab-links" onclick="opentab('category18')">Travel</p>
+                    <div class="menu-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
+                        <div class="burger-menu" style="padding: 10px;">
+                            <i class="fa-solid fa-bars" style="font-size: 1.6em; cursor: pointer;"></i>
+                        </div>
                     </div>
-                </ul>
+                    <ul class="menu-list">
+                        <h2>Categories</h2>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('category1')">Art & Photography</p>
+                            <p class="tab-links" onclick="opentab('category2')">Biography</p>
+                            <p class="tab-links" onclick="opentab('category3')">Business & Finance</p>
+                            <p class="tab-links" onclick="opentab('category4')">Cookbooks</p>
+                            <p class="tab-links" onclick="opentab('category5')">Children's Books</p>
+                            <p class="tab-links" onclick="opentab('category6')">Classic Literature</p>
+                            <p class="tab-links" onclick="opentab('category7')">Fiction</p>
+                            <p class="tab-links" onclick="opentab('category8')">Fantasy</p>
+                            <p class="tab-links" onclick="opentab('category9')">Horror</p>
+                            <p class="tab-links" onclick="opentab('category10')">Historical</p>
+                            <p class="tab-links" onclick="opentab('category11')">Mystery</p>
+                            <p class="tab-links" onclick="opentab('category12')">Non-Fiction</p>
+                            <p class="tab-links" onclick="opentab('category13')">Poetry</p>
+                            <p class="tab-links" onclick="opentab('category14')">Romance</p>
+                            <p class="tab-links" onclick="opentab('category15')">Science & Nature</p>
+                            <p class="tab-links" onclick="opentab('category16')">Science Fiction</p>
+                            <p class="tab-links" onclick="opentab('category17')">Technology</p>
+                            <p class="tab-links" onclick="opentab('category18')">Travel</p>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="content">

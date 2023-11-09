@@ -7,7 +7,6 @@
 body{
     justify-content: space-between;
 }
-
 section{
     width: 100%;
     height: 100vh;
@@ -16,6 +15,13 @@ section{
     background-position: center;
 }
 section nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -- Nav Container -- */
+section nav .nav-container{
     width: 100%;
     display: flex;
     align-items: center;
@@ -25,25 +31,26 @@ section nav{
     position: fixed;
     z-index: 100;
 }
-section nav .logo{
+section nav .nav-container .logo{
     display: flex;
     align-items: center;
     font-size: 2rem;
 }
-section nav .logo img{
+section nav .nav-container .logo img{
     width: 6rem;
     cursor: pointer;
     margin: 8px 0;
 }
-section nav .buttons{
+section nav .nav-container .buttons{
     display: flex;
     justify-content: space-around;
 }
-section nav .menu-button:hover,
-section nav .user-button:hover{
+section nav .nav-container .menu-button:hover,
+section nav .nav-container .cart-button:hover,
+section nav .nav-container .user-button:hover{
     background-color: #919191;
 }
-.menu-list {
+section nav .nav-container .cart-list {
     background-color: rgb(255, 255, 255);
     padding: 0;
     width: 300px;
@@ -58,24 +65,7 @@ section nav .user-button:hover{
     transition: 0.5s;
     box-shadow: 0 0 10px #089da1;
 }
-#tab-titles{
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    
-}
-#tab-titles li::after{
-    content: ' ';
-	width: 60%;
-	height: 3px;
-    left: 0;
-	background: rgb(50, 70, 200);
-    position: absolute;
-	bottom: 0px;
-}
-#tab-titles li::after:hover{
-    width: 100%;
-}
+
 @media (max-width: 486px) {
     .menu-list.active {
         width: 90%;
@@ -83,25 +73,25 @@ section nav .user-button:hover{
         background-color: rgba(0, 0, 0, 0.7);
     }
 }
-.menu-list::-webkit-scrollbar{
+section nav .nav-container .menu-list::-webkit-scrollbar{
   width: 12px;
   background-color: #089da1;
 }
-.menu-list::-webkit-scrollbar-thumb {
+section nav .nav-container .menu-list::-webkit-scrollbar-thumb {
   background: rgba(22, 79, 204, 0.438);
   border-radius: 6px;
 }
-.menu-list::-webkit-scrollbar-thumb:hover {
+section nav .nav-container.menu-list::-webkit-scrollbar-thumb:hover {
   background: rgba(17, 100, 209, 0.596);
   cursor: pointer;
 }
-.menu-list.active {
+section nav .nav-container .menu-list.active {
     right: 0;
 }
-.menu-list h2{
+section nav .nav-container .menu-list h2{
     margin: 20px;
 }
-.menu-list li {
+section nav .nav-container .menu-list li {
     padding: 10px;
     left:10px;
     right: 10px;
@@ -109,6 +99,32 @@ section nav .user-button:hover{
     text-align: center;
     cursor: pointer;
     position: relative;
+}
+
+/* -- nav-shortcuts --*/
+
+section nav .nav-shortcuts{
+    margin-top: 70px;
+    font-size: 20px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px #089da1;
+    background: #fff;
+    position: fixed;
+    z-index: 98;
+    border-radius: 10px;
+}
+#tab-shortcuts{
+    padding: 10px;
+    display: flex; 
+}
+@media screen and (max-width: 1500px)
+{
+    section nav .nav-shortcuts{
+        width: 90%;
+    }
 }
 
 /* --search-- */
@@ -304,8 +320,8 @@ section .main .main_img img{
 
 .bestseller{
     width: 100%;
-    height: 100vh;
-    padding: 5em 0;
+    min-height: 100vh;
+    padding: 8em 0;
 }
 
 .bestseller h1{
@@ -316,8 +332,8 @@ section .main .main_img img{
 }
 
 .bestseller .arrivals_box{
-    width: 95%;
-    margin: 0 auto;
+    width: 90%;
+    margin:  0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 25px 0;
@@ -325,7 +341,7 @@ section .main .main_img img{
 
 .bestseller .arrivals_box .arrivals_card{
     width: 250px;
-    height: 340px;
+    height: 320px;
     text-align: center;
     padding: 5px;
     border: 1px solid #919191;
@@ -338,7 +354,7 @@ section .main .main_img img{
 
 .bestseller .arrivals_box .arrivals_card .arrivals_image{
     width: 150px;
-    height: 220px;
+    height: 200px;
     margin: 0 auto;
     cursor: pointer;
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
@@ -381,9 +397,9 @@ section .main .main_img img{
 /*Books*/
 
 #books{
-    padding: 5em 0;
+    padding: 8em 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 #books h1{
     display: flex;
@@ -490,7 +506,7 @@ section .main .main_img img{
 	transition: background 0.5s;
 }
 .btn:hover{
-	background-color: rgba(10, 121, 180, 0.9);
+	background-color: rgba(10, 120, 180, 0.9);
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -534,7 +550,7 @@ section .main .main_img img{
 
 .reviews{
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
     padding: 70px 0;
 }
 
@@ -595,7 +611,7 @@ section .main .main_img img{
 
 .blog{
     width: 100%;
-    height: 100vh;
+    min-height: 90vh;
     padding: 70px 0;
     padding-top: 120px;
     display: block;
@@ -664,7 +680,7 @@ section .main .main_img img{
 
 .services{
     width: 100%;
-    height: 28vh;
+    min-height: 30vh;
 }
 .services .services_box{
     width: 95%;

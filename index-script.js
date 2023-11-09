@@ -84,8 +84,8 @@ rightButton.addEventListener("click", () => {
 // ---- Burger Menu ----
 
 const burgerMenu = document.querySelector('.burger-menu');
-const menuButton = document.querySelector('.menu-button');
-const menuList = document.querySelector('.menu-list');
+const menuButton = document.querySelector('.shop-button');
+const menuList = document.querySelector('.shop-list');
 
 menuButton.addEventListener('click', () => {
     menuList.classList.toggle('active');

@@ -9,68 +9,67 @@
     <link rel="stylesheet" href="index-style.css">
 </head>
 <body>
-    <section>
+    <section id="home">
         <nav>
-            <a href="index.html" data-after="home"><li>
-                <div class="logo" href="index.html" data-after="home">
-                    <img src="image/logo.png">
-                    <h4 style="color:black">MyBooks</h4>
-                </div>
-            </li></a>
-            <div id="search" class>
-                <input id="search-input" type="text" name="search_keyword" autocomplete="off" value placeholder="search book, author or publisher name" class>
-                <div class="seach-tools">
-                    <div id="search-key-container" style="display: none;">
-                        <a onclick="insertText('ç')">ç</a>
-                        <a onclick="insertText('ğ')">ğ</a>
-                        <a onclick="insertText('ı')">ı</a>
-                        <a onclick="insertText('ö')">ö</a>
-                        <a onclick="insertText('ş')">ş</a>
-                        <a onclick="insertText('ü')">ü</a>
+            <div class="nav-container">
+                <a href="index.html" data-after="home"><li>
+                    <div class="logo" href="index.html" data-after="home">
+                        <img src="image/logo.png">
+                        <h4 style="color:black">MyBooks</h4>
+                    </div>
+                </li></a>
+                <div id="search" class>
+                    <input id="search-input" type="text" name="search_keyword" autocomplete="off" value placeholder="search book, author or publisher name" class>
+                    <div class="seach-tools">
+                        <div id="search-key-container" style="display: none;">
+                            <a onclick="insertText('ç')">ç</a>
+                            <a onclick="insertText('ğ')">ğ</a>
+                            <a onclick="insertText('ı')">ı</a>
+                            <a onclick="insertText('ö')">ö</a>
+                            <a onclick="insertText('ş')">ş</a>
+                            <a onclick="insertText('ü')">ü</a>
+                        </div>
+                    </div>
+                    <div id="search-btn"><span class="fa-solid fa-magnifying-glass" style="margin-left: 10px;"></span></div>
+                    <div class="search-panel-container.show" style="display: none;" id="search-panel-cr">
+                        <div class="search-panel">
+                            <span class="close-button">
+                                <a onclick="resetSearchPanel()"><i class="fa-solid fa-xmark"::before></i></a>
+                            </span>
+                        </div>
+                        <div class="search-panel">
+                            <ul>
+                                <li class="fast-type-0.fast-type-multi"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div id="search-btn"><span class="fa-solid fa-magnifying-glass" style="margin-left: 10px;"></span></div>
-                <div class="search-panel-container.show" style="display: none;" id="search-panel-cr">
-                    <div class="search-panel">
-                        <span class="close-button">
-                            <a onclick="resetSearchPanel()"><i class="fa-solid fa-xmark"::before></i></a>
-                        </span>
+                <div class="buttons">
+                    <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
+                        <div class="burger-menu" style="padding: 5px;">
+                            <i class="fa-regular fa-user" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
+                        </div>
                     </div>
-                    <div class="search-panel">
-                        <ul>
-                            <li class="fast-type-0.fast-type-multi"></li>
-                        </ul>
+                    <div class="cart-button" style="border-radius: 50%; transition: 0.5s; padding:10px;">
+                        <div class="burger-menu" style="padding: 5px;">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
+                        </div>
                     </div>
+                    <ul class="cart-list">
+                        
+                    </ul>
                 </div>
             </div>
-            
-            <div class="buttons">
-                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
-                    <div class="burger-menu" style="padding: 5px;">
-                        <i class="fa-regular fa-user" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
-                    </div>
+            <div class="nav-shortcuts">
+                <div class="tab-shortcuts" id="tab-shortcuts">          
+                    <li><a href="#home" data-after="home">Home</a></li>
+                    <li><a href="about.html" data-after="about">About</a></li>
+                    <li><a href="categories.html" data-after="categories">Categories</a></li>
+                    <li><a href="#bestseller" data-after="bestseller">Bestseller</a></li>
+                    <li><a href="#books" data-after="books">Featured</a></li>
+                    <li><a href="#reviews" data-after="reviews">Reviews</a></li>
+                    <li><a href="#blogs" data-after="blogs">Blogs</a></li>
                 </div>
-                <div class="user-button" style="border-radius: 50%; transition: 0.5s; padding:10px;">
-                    <div class="burger-menu" style="padding: 5px;">
-                        <i class="fa-solid fa-cart-shopping" style="font-size: 1.6em; cursor: pointer; font-weight: 550;"></i>
-                    </div>
-                </div>
-                <div class="menu-button" style="border-radius: 50%; transition: 0.5s; padding: 10px;">
-                    <div class="burger-menu" style="padding: 5px;">
-                        <i class="fa-solid fa-bars" style="font-size: 1.6em; cursor: pointer;"></i>
-                    </div>
-                </div>
-                <ul class="menu-list">
-                    <div id="tab-titles" style="margin-top: 40px;">
-                        <li><a href="#home" data-after="home" onclick="scrollToTop()">Home</a></li>
-                        <li><a href="about.html" data-after="about">About</a></li>
-                        <li><a href="categories.html" data-after="categories">Categories</a></li>
-                        <li><a href="#bestseller" data-after="bestseller">Bestseller</a></li>
-                        <li><a href="#books" data-after="books">Featured</a></li>
-                        <li><a href="#reviews" data-after="reviews">Reviews</a></li>
-                        <li><a href="#blogs" data-after="blogs">Blogs</a></li>
-                    </div>
-                </ul>
             </div>
         </nav>
 
