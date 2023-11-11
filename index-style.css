@@ -53,8 +53,8 @@ section nav .nav-container .user-button:hover{
 section nav .nav-container .cart-list {
     background-color: rgb(255, 255, 255);
     padding: 0;
-    width: 300px;
-    height: 100%;
+    width: 360px;
+    height: 94%;
     position: fixed;
     margin-top: 66px;
     right: -500px;
@@ -67,31 +67,31 @@ section nav .nav-container .cart-list {
 }
 
 @media (max-width: 486px) {
-    .menu-list.active {
+    .cart-list.active {
         width: 90%;
         right: 0;
         background-color: rgba(0, 0, 0, 0.7);
     }
 }
-section nav .nav-container .menu-list::-webkit-scrollbar{
+section nav .nav-container .cart-list::-webkit-scrollbar{
   width: 12px;
-  background-color: #089da1;
+  background-color: white;
 }
-section nav .nav-container .menu-list::-webkit-scrollbar-thumb {
-  background: rgba(22, 79, 204, 0.438);
+section nav .nav-container .cart-list::-webkit-scrollbar-thumb {
+  background: #089da1;
   border-radius: 6px;
 }
-section nav .nav-container.menu-list::-webkit-scrollbar-thumb:hover {
-  background: rgba(17, 100, 209, 0.596);
+section nav .nav-container.cart-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 100, 200, 0.8);
   cursor: pointer;
 }
-section nav .nav-container .menu-list.active {
+section nav .nav-container .cart-list.active {
     right: 0;
 }
-section nav .nav-container .menu-list h2{
+section nav .nav-container .cart-list h2{
     margin: 20px;
 }
-section nav .nav-container .menu-list li {
+section nav .nav-container .cart-list li {
     padding: 10px;
     left:10px;
     right: 10px;
